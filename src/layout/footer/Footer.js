@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <div
-      className="pb-16 lg:pb-0 xl:pb-0 bg-white"
+      className="pb-16 lg:pb-0 xl:pb-0 bg-white Acme"
       style={{ backgroundColor: `#FDE8A6` }}
     >
       <div className="mx-auto max-w-screen-2xl px-2 sm:px-10">
@@ -36,7 +36,7 @@ const Footer = () => {
                 />
               </a>
             </Link>
-            <p className="leading-7 font-sans text-sm text-gray-600 mt-3">
+            <p className="leading-7 text-sm text-gray-600 mt-3 Acme">
               <span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const FooterTop = () => {
   return (
-    <div id="downloadApp" className="bg-indigo-50 py-10 lg:py-16 bg-repeat bg-center overflow-hidden">
+    <div id="downloadApp" className="bg-indigo-50 py-10 lg:py-16 bg-repeat bg-center overflow-hidden Acme">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-2 md:gap-3 lg:gap-3 items-center">
           <div className="flex-grow hidden lg:flex md:flex md:justify-items-center lg:justify-start">
@@ -17,7 +17,7 @@ const FooterTop = () => {
             />
           </div>
           <div className="text-center">
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold font-serif mb-3">
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold Acme mb-3">
               Get Your Daily Needs From Our KachaBazar Store
             </h3>
             <p className="text-base opacity-90 leading-7">
@@ -25,7 +25,7 @@ const FooterTop = () => {
               necessary product from our KachaBazar shop and get some special
               offer.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 Acme">
               <Link href="https://www.apple.com/app-store/">
                 <a className="mx-2" target="_blank" rel="noreferrer">
                   <Image

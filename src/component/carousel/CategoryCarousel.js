@@ -77,7 +77,7 @@ const CategoryCarousel = () => {
         className="mySwiper category-slider my-10"
       >
         {error ? (
-          <p className="flex justify-center align-middle items-center m-auto text-xl text-red-500">
+          <p className="flex justify-center align-middle items-center m-auto text-xl text-red-500 Acme">
             <span> {error}</span>
           </p>
         ) : (

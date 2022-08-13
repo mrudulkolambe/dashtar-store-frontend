@@ -52,7 +52,7 @@ const Navbar = () => {
         <LoginModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       )}
 
-      <div className="new-bg sticky top-0 z-20">
+      <div className="new-bg sticky top-0 z-20 Acme">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10">
           <div className="top-bar h-16 lg:h-auto flex items-center justify-start py-4 mx-auto">
             <Link href="/">
@@ -96,22 +96,22 @@ const Navbar = () => {
              */}
             <div className="hidden md:hidden md:items-right lg:flex xl:block absolute inset-y-0  pl-20 pr-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0 flex flex-row justify-between mr-80 ml-10">
             <Link href="/about-us">
-                      <a className="font-serif mx-2 py-2 text-l font-bold hover:text-emerald-600">
+                      <a className="Acme tracking-wide mx-2 py-2 text-l font-bold hover:text-emerald-600">
                         About Us
                       </a>
               </Link>
                     <Link href="/contact-us">
-                      <a className="font-serif mx-2 py-2 text-l font-bold hover:text-emerald-600">
+                      <a className="Acme tracking-wide mx-2 py-2 text-l font-bold hover:text-emerald-600">
                         Contact Us
                       </a>
                     </Link>
                     <Link href="/about-us">
-                      <a className="font-serif mx-2 py-2 text-l font-bold hover:text-emerald-600">
+                      <a className="Acme tracking-wide mx-2 py-2 text-l font-bold hover:text-emerald-600">
                         Shop
                       </a>
               </Link>
                     <Link href="/contact-us">
-                      <a className="font-serif mx-2 py-2 text-l font-bold hover:text-emerald-600">
+                      <a className="Acme tracking-wide mx-2 py-2 text-l font-bold hover:text-emerald-600">
                         Offers
                       </a>
                     </Link>
@@ -154,7 +154,7 @@ const Navbar = () => {
                   </Link>
                 ) : userInfo?.name ? (
                   <Link href="/user/dashboard">
-                    <a className="leading-none font-bold font-serif block">
+                    <a className="leading-none font-bold Acme tracking-wide block">
                       {userInfo?.name[0]}
                     </a>
                   </Link>

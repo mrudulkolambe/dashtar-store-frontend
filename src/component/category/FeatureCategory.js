@@ -20,7 +20,7 @@ const FeatureCategory = () => {
         </p>
       ) : (
         <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6">
-          {data?.map((category, i) => (
+          {data && data?.map((category, i) => (
             <li className="group" key={i + 1}>
               <div
                 onClick={() =>

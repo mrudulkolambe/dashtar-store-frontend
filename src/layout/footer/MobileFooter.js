@@ -21,7 +21,7 @@ const MobileFooter = () => {
   return (
     <>
       <LoginModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      <div className="flex flex-col h-full justify-between align-middle bg-white rounded cursor-pointer overflow-y-scroll flex-grow scrollbar-hide w-full">
+      <div className="Acme flex flex-col h-full justify-between align-middle bg-white rounded cursor-pointer overflow-y-scroll flex-grow scrollbar-hide w-full">
         <CategoryDrawer className="w-6 h-6 drop-shadow-xl" />
       </div>
       <footer className="lg:hidden fixed z-30 bottom-0 new-bg flex items-center justify-between w-full h-16 px-3 sm:px-10">

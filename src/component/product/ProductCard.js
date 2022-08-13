@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
         product={product}
       />
 
-      <div className="group box-border w-80 overflow-hidden flex rounded-md shadow-sm pe-0 flex-col items-center justify-end bg-white relative">
+      <div className="w-60 shadow-lg group box-border overflow-hidden flex rounded-md pe-0 flex-col items-center justify-end bg-white relative">
         <div
           onClick={() => setModalOpen(!modalOpen)}
           className="relative flex flex-col items-center justify-center w-full cursor-pointer"
@@ -39,15 +39,15 @@ const ProductCard = ({ product }) => {
           )}
           <div 
           style={{backgroundColor:`#E0A2B4`}}
-          className='mb-2 group box-border w-50% overflow-hidden rounded-md flex  flex-col items-center justify-center  text-white relative '>
-            <h2 className="text-heading truncate mb-3 block text-sm font-medium text-gray-600">
+          className='mb-2 group box-border w-50% overflow-hidden rounded-b-md py-1 px-2 flex  flex-col items-center justify-center  text-black relative '>
+            <h2 className="text-heading truncate block text-sm font-medium">
               <span className="line-clamp-2">{product.title}</span>
             </h2>
           </div>
           {/* <Discount product={product} /> */}
 
           <Image
-            src={product.image}
+            src={'https://images.unsplash.com/photo-1660331036382-bf5a59e28d52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80'}
             width={100}
             height={100}
             alt={product.title}
@@ -65,7 +65,7 @@ const ProductCard = ({ product }) => {
             </h2>
           </div> */}
 
-          <div className="flex flex-col justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+          <div className="mt-2 flex flex-col justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
           {/* <Price product={product} card={true} /> */}
             {inCart(product._id) ? (
               <div className='mb-2'>
