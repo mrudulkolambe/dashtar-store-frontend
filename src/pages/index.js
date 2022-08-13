@@ -71,7 +71,7 @@ const Home = ({ products, popularProducts, discountProducts }) => {
             </div>
             <div className="flex">
               <div className="w-full">
-                <div className="grid grid-cols-5 sm:grid-cols-1 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 gap-2 md:gap-6 lg:gap-8">
+                <div className="grid md:grid-cols-3 justify-items-center grid-cols-1 xs:grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5 gap-2 md:gap-6 lg:gap-8">
                   {/* {popularProducts?.slice(0, 18).map((product) => (
                     <ProductCard key={product._id} product={product} />
                   ))} */}
@@ -100,7 +100,7 @@ const Home = ({ products, popularProducts, discountProducts }) => {
             </div>
             <div className="flex">
               <div className="w-full flex items-center flex-col">
-                <div className="w-11/12 grid grid-cols-3 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-2 md:gap-6 lg:gap-8">
+                <div className="w-11/12 grid md:grid-cols-2 justify-items-center grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-2 md:gap-6 lg:gap-8">
                   <div className='flex flex-col items-center'>
                     <div className='rounded-full new-bg p-12 w-max'>
                       <FaShoppingBag className='accent-color-text text-5xl' />
