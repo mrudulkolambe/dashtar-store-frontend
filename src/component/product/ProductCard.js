@@ -27,46 +27,54 @@ const ProductCard = ({ product }) => {
         product={product}
       />
 
-      <div className="group box-border overflow-hidden flex rounded-md shadow-sm pe-0 flex-col items-center bg-white relative">
+      <div className="group box-border w-80 overflow-hidden flex rounded-md shadow-sm pe-0 flex-col items-center justify-end bg-white relative">
         <div
           onClick={() => setModalOpen(!modalOpen)}
-          className="relative flex justify-center w-full cursor-pointer"
+          className="relative flex flex-col items-center justify-center w-full cursor-pointer"
         >
           {product.quantity <= 0 && (
             <span className="absolute inline-flex items-center justify-center px-2 py-1 bg-red-100 text-red-600 border-0 rounded-full text-xs font-semibold font-serif z-10 left-4 top-4">
               Stock Out
             </span>
           )}
-          <Discount product={product} />
+          <div 
+          style={{backgroundColor:`#E0A2B4`}}
+          className='mb-2 group box-border w-50% overflow-hidden rounded-md flex  flex-col items-center justify-center  text-white relative '>
+            <h2 className="text-heading truncate mb-3 block text-sm font-medium text-gray-600">
+              <span className="line-clamp-2">{product.title}</span>
+            </h2>
+          </div>
+          {/* <Discount product={product} /> */}
 
           <Image
             src={product.image}
-            width={160}
-            height={160}
+            width={100}
+            height={100}
             alt={product.title}
             className="object-cover transition duration-150 ease-linear transform group-hover:scale-105"
           />
+         
         </div>
         <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-          <div className="relative mb-1">
+          {/* <div className="relative mb-1">
             <span className="text-gray-400 font-medium text-xs d-block mb-1">
               {product.unit}
             </span>
             <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
               <span className="line-clamp-2">{product.title}</span>
             </h2>
-          </div>
+          </div> */}
 
-          <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-            <Price product={product} card={true} />
+          <div className="flex flex-col justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+          {/* <Price product={product} card={true} /> */}
             {inCart(product._id) ? (
-              <div>
+              <div className='mb-2'>
                 {items.map(
                   (item) =>
                     item.id === product._id && (
                       <div
                         key={item.id}
-                        className="h-9 w-auto flex flex-wrap items-center justify-evenly py-1 px-2 new-bg text-white rounded"
+                        className="h-9 w-auto flex flex-wrap items-center justify-evenly py-1 px-2 new-bg text-black rounded"
                       >
                         <button
                           onClick={() =>
@@ -90,16 +98,18 @@ const ProductCard = ({ product }) => {
                             <IoAdd />
                           </span>
                         </button>
+                        
                       </div>
                     )
                 )}{' '}
+                
               </div>
             ) : (
               <button
                 onClick={() => handleAddItem(product)}
                 disabled={product.quantity < 1}
                 aria-label="cart"
-                className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded new-text-600 hover:border-emerald-500 hover:new-bg hover:text-white transition-all"
+                className="h-9 w-9 mb-2 flex items-center justify-center border border-gray-200 rounded new-text-600 hover:border-emerald-500 hover:new-bg hover:text-white transition-all"
               >
                 {' '}
                 <span className="text-xl">
@@ -107,6 +117,8 @@ const ProductCard = ({ product }) => {
                 </span>{' '}
               </button>
             )}
+            
+            <Price product={product} card={true} />
           </div>
         </div>
       </div>

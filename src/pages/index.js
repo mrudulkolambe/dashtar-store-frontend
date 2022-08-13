@@ -67,11 +67,15 @@ const Home = ({ products, popularProducts, discountProducts }) => {
               </div>
             </div>
             <div className="flex">
-              <div className="w-full">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3 lg:gap-3">
-                  {popularProducts?.slice(0, 18).map((product) => (
+              <div className="w-full 2xl:ml-40 xl:ml-20 ">
+                <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-2 md:gap-6 lg:gap-8">
+                  {/* {popularProducts?.slice(0, 18).map((product) => (
+                    <ProductCard key={product._id} product={product} />
+                  ))} */}
+                  {products?.slice(0, 18).map((product) => (
                     <ProductCard key={product._id} product={product} />
                   ))}
+                  
                 </div>
               </div>
             </div>
@@ -103,9 +107,9 @@ const Home = ({ products, popularProducts, discountProducts }) => {
               </div>
             </div>
             <div className="flex">
-              <div className="w-full">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3 lg:gap-3">
-                  {discountProducts?.slice(0, 18).map((product) => (
+            <div className="w-full 2xl:ml-40 xl:ml-20 ">
+                <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-2 md:gap-6 lg:gap-8">
+                  {products?.slice(0, 18).map((product) => (
                     <ProductCard key={product._id} product={product} />
                   ))}
                 </div>
