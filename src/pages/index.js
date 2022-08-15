@@ -60,6 +60,51 @@ const Home = ({ products, popularProducts, discountProducts }) => {
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
                 <h2 className="text-xl lg:text-2xl mb-2 Acme font-semibold Acme">
+                  How we can serve you and deliver
+                  your <span className='accent-color-text'>favourite fruits</span>
+                </h2>
+                <p className="hidden text-base font-sans text-gray-600 leading-6 Acme">
+                  See all our popular products in this week. You can choose your
+                  daily needs products from this list and get some special offer
+                  with free shipping.
+                </p>
+              </div>
+            </div>
+            <div className="flex mt-4">
+              <div className="w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 w-full gap-6">
+                  <div className='text-center flex items-center flex-col'>
+                    <img src={'/app/step-1.png'} className="serve-img" alt="" />
+                    <div>
+                      <h1 className='accent-color-text text-2xl'>Step 1</h1>
+                      <p>Select your item and get into your cart</p>
+                    </div>
+                  </div>
+                  <div className='text-center flex items-center flex-col'>
+                    <img src={'/app/step-2.png'} className="serve-img" alt=""  />
+                    <div>
+                      <h1 className='accent-color-text text-2xl'>Step 2</h1>
+                      <p>Placed your order in just few seconds</p>
+                    </div>
+                  </div>
+                  <div className='text-center flex items-center flex-col'>
+                    <img src={'/app/step-3.png'} className="serve-img" alt="" />
+                    <div className='text-center'>
+                      <h1 className='accent-color-text text-2xl'>Step 3</h1>
+                      <p className='w-1/2 m-auto'>Your order will be delivered to your address with proper quality checks</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          {/* popular products */}
+          <div className="bg-gray-50 lg:py-16 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10 Acme">
+            <div className="mb-10 flex justify-center">
+              <div className="text-center w-full lg:w-2/5">
+                <h2 className="text-xl lg:text-2xl mb-2 Acme font-semibold Acme">
                   <span className='accent-color-text'>Popular</span> Products for Daily Shopping
                 </h2>
                 <p className="text-base font-sans text-gray-600 leading-6 Acme">

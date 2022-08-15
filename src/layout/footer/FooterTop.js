@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const FooterTop = () => {
   return (
-    <div id="downloadApp" className="bg-indigo-50 py-10 lg:py-16 bg-repeat bg-center overflow-hidden Acme">
+    <div id="downloadApp" className="hidden bg-indigo-50 py-10 lg:py-16 bg-repeat bg-center overflow-hidden Acme">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-2 md:gap-3 lg:gap-3 items-center">
           <div className="flex-grow hidden lg:flex md:flex md:justify-items-center lg:justify-start">

@@ -52,14 +52,14 @@ const Navbar = () => {
         <LoginModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       )}
 
-      <div className="new-bg sticky top-0 z-20 Acme">
+      <div className="new-bg sticky top-0 z-20">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10">
           <div className="top-bar h-16 lg:h-auto flex items-center justify-start py-4 mx-auto">
             <Link href="/">
               <a className="ml-0 mr-5 hidden md:hidden lg:block">
                 <Image
-                  width={110}
-                  height={45}
+                  width={128}
+                  height={71}
                   src="/logo/logo.png"
                   alt="logo"
                 />
@@ -71,7 +71,7 @@ const Navbar = () => {
                   <form
                     onSubmit={handleSubmit}
                     className="relative pr-12 md:pr-14 bg-white overflow-hidden shadow-sm rounded-md w-full"
-                    style={{ borderRadius: '30px'}}
+                    style={{ borderRadius: '30px' }}
                   >
                     <button
                       aria-label="Search"
@@ -94,29 +94,29 @@ const Navbar = () => {
             </div>
             {/* <NavbarPromo />
              */}
-            <div className="hidden md:hidden md:items-right lg:flex xl:block absolute inset-y-0  pl-20 pr-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0 flex flex-row justify-between mr-80 ml-10">
-            <Link href="/about-us">
-                      <a className="Acme tracking-wide mx-2 py-2 text-l font-bold hover:text-emerald-600">
-                        About Us
-                      </a>
+            <div className="md:hidden md:items-right lg:flex xl:flex w-max inset-y-0  lg:pl-20 xl:pl-0 pr-0 hidden sm:inset-auto sm:ml-6 sm:pr-0 flex-row justify-between mr-80 ml-10">
+              <Link href="/about-us">
+                <a className="Poppins mx-2 py-2 text-l font-semibold hover:text-emerald-600">
+                  About Us
+                </a>
               </Link>
-                    <Link href="/contact-us">
-                      <a className="Acme tracking-wide mx-2 py-2 text-l font-bold hover:text-emerald-600">
-                        Contact Us
-                      </a>
-                    </Link>
-                    <Link href="/about-us">
-                      <a className="Acme tracking-wide mx-2 py-2 text-l font-bold hover:text-emerald-600">
-                        Shop
-                      </a>
+              <Link href="/contact-us">
+                <a className="Poppins mx-2 py-2 text-l font-semibold hover:text-emerald-600">
+                  Contact Us
+                </a>
               </Link>
-                    <Link href="/contact-us">
-                      <a className="Acme tracking-wide mx-2 py-2 text-l font-bold hover:text-emerald-600">
-                        Offers
-                      </a>
-                    </Link>
+              <Link href="/about-us">
+                <a className="Poppins mx-2 py-2 text-l font-semibold hover:text-emerald-600">
+                  Shop
+                </a>
+              </Link>
+              <Link href="/contact-us">
+                <a className="Poppins mx-2 py-2 text-l font-semibold hover:text-emerald-600">
+                  Offers
+                </a>
+              </Link>
             </div>
-             
+
             <div className="hidden md:hidden md:items-right lg:flex xl:block absolute inset-y-0  pl-20 pr-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button
                 className="pr-5 text-black text-2xl font-bold"
@@ -154,7 +154,7 @@ const Navbar = () => {
                   </Link>
                 ) : userInfo?.name ? (
                   <Link href="/user/dashboard">
-                    <a className="leading-none font-bold Acme tracking-wide block">
+                    <a className="leading-none font-bold Poppins block">
                       {userInfo?.name[0]}
                     </a>
                   </Link>

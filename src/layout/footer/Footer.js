@@ -25,75 +25,71 @@ const Footer = () => {
     >
       <div className="mx-auto max-w-screen-2xl px-2 sm:px-10">
         <div className="grid grid-cols-2 md:grid-cols-7 xl:grid-cols-12 gap-5 sm:gap-9 lg:gap-11 xl:gap-7 py-10 lg:py-16 justify-between">
-        <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
+          <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
             <Link href="/">
               <a className="mr-3 lg:mr-12 xl:mr-12" rel="noreferrer">
                 <Image
-                  width={110}
-                  height={50}
+                  width={128}
+                  height={71}
                   src="/logo/logo.png"
                   alt="logo"
                 />
               </a>
             </Link>
-            <p className="leading-7 text-sm text-gray-600 mt-3 Acme">
+            <p className="leading-7  text-black mt-3 Acme">
               <span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
               </span>
-              <br />
-              <span>Phone: </span>
-              <br />
-              <span>Email: </span>
             </p>
           </div>
           <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3 mt-7 ml-10">
-          <div className="flex flex-col justify-center text-center">
-            <h3 className="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
-              Company
-            </h3>
-            
-            <ul className="text-sm flex flex-col space-y-3">
-              <li className="flex items-baseline">
-                <Link href="/about-us">
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
-                    About Us
-                  </a>
-                </Link>
-              </li>
-              <li className="flex items-baseline">
-                <Link href="/contact-us">
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
-                    Contact us
-                  </a>
-                </Link>
-              </li>
-              <li className="flex items-baseline">
-                <Link href="#">
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
-                    Careers
-                  </a>
-                </Link>
-              </li>
-              <li className="flex items-baseline">
-                <Link href="#">
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
-                    Latest news
-                  </a>
-                </Link>
-              </li>
-            </ul>
+            <div className="flex flex-col justify-center text-center">
+              <h3 className="lg:leading-7 font-bold mb-4 sm:mb-5 lg:mb-6 pb-0.5">
+                Company
+              </h3>
+
+              <ul className=" flex flex-col space-y-3">
+                <li className="flex items-baseline">
+                  <Link href="/about-us">
+                    <a className="text-black inline-block w-full hover:new-text-600">
+                      About Us
+                    </a>
+                  </Link>
+                </li>
+                <li className="flex items-baseline">
+                  <Link href="/contact-us">
+                    <a className="text-black inline-block w-full hover:new-text-600">
+                      Contact us
+                    </a>
+                  </Link>
+                </li>
+                <li className="flex items-baseline">
+                  <Link href="#">
+                    <a className="text-black inline-block w-full hover:new-text-600">
+                      Careers
+                    </a>
+                  </Link>
+                </li>
+                <li className="flex items-baseline">
+                  <Link href="#">
+                    <a className="text-black inline-block w-full hover:new-text-600">
+                      Latest news
+                    </a>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
           {/* <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
             <h3 className="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
               Top Category
             </h3>
-            <ul className="text-sm lg:text-15px flex flex-col space-y-3">
+            <ul className=" lg:text-15px flex flex-col space-y-3">
               <li className="flex items-baseline">
                 <Link href="/search?Category=fish--meat">
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
+                  <a className="text-black inline-block w-full hover:new-text-600">
                     Fish & Meat
                   </a>
                 </Link>
@@ -101,21 +97,21 @@ const Footer = () => {
 
               <li className="flex items-baseline">
                 <Link href="/search?Category=drinks">
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
+                  <a className="text-black inline-block w-full hover:new-text-600">
                     Soft Drinks
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link href="search?Category=baby-care">
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
+                  <a className="text-black inline-block w-full hover:new-text-600">
                     Baby Care
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link href="search?Category=beauty--health">
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
+                  <a className="text-black inline-block w-full hover:new-text-600">
                     Beauty & Health
                   </a>
                 </Link>
@@ -123,76 +119,76 @@ const Footer = () => {
             </ul>
           </div> */}
           <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3 mt-6 mr-10">
-          <div className="flex flex-col justify-center text-center">
-            <h3 className="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
-              My Account
-            </h3>
-            <ul className="text-sm lg:text-15px flex flex-col space-y-3">
-              <li className="flex items-baseline">
-                <Link href={`${userInfo?.email ? "/user/dashboard" : "#"}`}>
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
-                    Dashboard
-                  </a>
-                </Link>
-              </li>
-              <li className="flex items-baseline">
-                <Link href={`${userInfo?.email ? "/user/my-orders" : "#"}`}>
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
-                    My Orders
-                  </a>
-                </Link>
-              </li>
-              <li className="flex items-baseline">
-                <Link href={`${userInfo?.email ? "/user/dashboard" : "#"}`}>
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
-                    Recent Orders
-                  </a>
-                </Link>
-              </li>
-              <li className="flex items-baseline">
-                <Link
-                  href={`${userInfo?.email ? "/user/update-profile" : "#"}`}
-                >
-                  <a className="text-gray-600 inline-block w-full hover:new-text-600">
-                    Updated Profile
-                  </a>
-                </Link>
-              </li>
-            </ul>
+            <div className="flex flex-col justify-center text-center">
+              <h3 className="text-md lg:leading-7 font-bold mb-4 sm:mb-5 lg:mb-6 pb-0.5">
+                My Account
+              </h3>
+              <ul className=" lg:text-15px flex flex-col space-y-3">
+                <li className="flex items-baseline">
+                  <Link href={`${userInfo?.email ? "/user/dashboard" : "#"}`}>
+                    <a className="text-black inline-block w-full hover:new-text-600">
+                      Dashboard
+                    </a>
+                  </Link>
+                </li>
+                <li className="flex items-baseline">
+                  <Link href={`${userInfo?.email ? "/user/my-orders" : "#"}`}>
+                    <a className="text-black inline-block w-full hover:new-text-600">
+                      My Orders
+                    </a>
+                  </Link>
+                </li>
+                <li className="flex items-baseline">
+                  <Link href={`${userInfo?.email ? "/user/dashboard" : "#"}`}>
+                    <a className="text-black inline-block w-full hover:new-text-600">
+                      Recent Orders
+                    </a>
+                  </Link>
+                </li>
+                <li className="flex items-baseline">
+                  <Link
+                    href={`${userInfo?.email ? "/user/update-profile" : "#"}`}
+                  >
+                    <a className="text-black inline-block w-full hover:new-text-600">
+                      Updated Profile
+                    </a>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
-        
-        
-        <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3 mt-7">
-        <h3 className="text-md lg:leading-7 font-bold">
+
+
+          <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3 mt-7">
+            <h3 className="text-md lg:leading-7 font-bold">
               Follow Us
             </h3>
-            <ul className="text-sm flex">
-                <li className="flex items-center mr-3 transition ease-in-out duration-500">
-                  <Link href="https://www.facebook.com">
-                    <a
-                      aria-label="Social Link"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="block text-center mx-auto text-black-500 hover:text-white"
-                    >
-                      <FacebookIcon size={34} round />
-                    </a>
-                  </Link>
-                </li>
-                <li className="flex items-center  mr-3 transition ease-in-out duration-500">
-                  <Link href="https://twitter.com">
-                    <a
-                      aria-label="Social Link"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="block text-center mx-auto text-gray-500 hover:text-white"
-                    >
-                      <TwitterIcon size={34} round />
-                    </a>
-                  </Link>
-                </li>
-                {/* <li className="flex items-center mr-3 transition ease-in-out duration-500">
+            <ul className=" flex">
+              <li className="flex items-center mr-3 transition ease-in-out duration-500">
+                <Link href="https://www.facebook.com">
+                  <a
+                    aria-label="Social Link"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="block text-center mx-auto text-black-500 hover:text-white"
+                  >
+                    <FacebookIcon size={34} round />
+                  </a>
+                </Link>
+              </li>
+              <li className="flex items-center  mr-3 transition ease-in-out duration-500">
+                <Link href="https://twitter.com">
+                  <a
+                    aria-label="Social Link"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="block text-center mx-auto text-gray-500 hover:text-white"
+                  >
+                    <TwitterIcon size={34} round />
+                  </a>
+                </Link>
+              </li>
+              {/* <li className="flex items-center mr-3 transition ease-in-out duration-500">
                   <Link href="https://www.pinterest.com">
                     <a
                       aria-label="Social Link"
@@ -204,19 +200,19 @@ const Footer = () => {
                     </a>
                   </Link>
                 </li> */}
-                <li className="flex items-center  mr-3 transition ease-in-out duration-500">
-                  <Link href="https://www.linkedin.com">
-                    <a
-                      aria-label="Social Link"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="block text-center mx-auto text-black-500 hover:text-white"
-                    >
-                      <LinkedinIcon size={34} round />
-                    </a>
-                  </Link>
-                </li>
-                {/* <li className="flex items-center  mr-3 transition ease-in-out duration-500">
+              <li className="flex items-center  mr-3 transition ease-in-out duration-500">
+                <Link href="https://www.linkedin.com">
+                  <a
+                    aria-label="Social Link"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="block text-center mx-auto text-black-500 hover:text-white"
+                  >
+                    <LinkedinIcon size={34} round />
+                  </a>
+                </Link>
+              </li>
+              {/* <li className="flex items-center  mr-3 transition ease-in-out duration-500">
                   <Link href="https://www.whatsapp.com">
                     <a
                       aria-label="Social Link"
@@ -228,9 +224,9 @@ const Footer = () => {
                     </a>
                   </Link>
                 </li> */}
-              </ul>
+            </ul>
 
-        </div>
+          </div>
         </div>
 
         {/* <hr className="hr-line"></hr> */}
@@ -241,7 +237,7 @@ const Footer = () => {
               <span className="text-base leading-7 font-medium block mb-2 pb-0.5">
                 Follow Us
               </span>
-              <ul className="text-sm flex">
+              <ul className=" flex">
                 <li className="flex items-center mr-3 transition ease-in-out duration-500">
                   <Link href="https://www.facebook.com">
                     <a
@@ -304,7 +300,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div> */}
-            {/* <div className="col-span-1 text-center hidden lg:block md:block">
+        {/* <div className="col-span-1 text-center hidden lg:block md:block">
               <p className="text-base leading-7 font-medium block">
                 Call Us Today!
               </p>
@@ -325,12 +321,12 @@ const Footer = () => {
                 </li>
               </ul>
             </div> */}
-          {/* </div> */}
+        {/* </div> */}
         {/* </div> */}
       </div>
 
       {/* <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 flex justify-center py-4">
-        <p className="text-sm text-gray-500 leading-6">
+        <p className=" text-gray-500 leading-6">
           Copyright 2022 @{" "}
           <Link href="https://themeforest.net/user/htmllover">
             <a

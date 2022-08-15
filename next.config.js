@@ -33,7 +33,7 @@ module.exports = withPWA({
       'fakestoreapi.com',
       'res.cloudinary.com',
       'lh3.googleusercontent.com',
-      '',
+      'kachabazar-store.vercel.app'
     ],
   },
 });
