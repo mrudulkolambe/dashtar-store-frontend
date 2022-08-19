@@ -17,8 +17,8 @@ const Invoice = ({ data, printRef }) => {
               <Link href="/">
                 <a className="">
                   <Image
-                    width={110}
-                    height={40}
+                    width={128}
+                    height={71}
                     src="/logo/logo.png"
                     alt="logo"
                   />
