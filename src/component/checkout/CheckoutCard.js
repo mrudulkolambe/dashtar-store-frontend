@@ -20,7 +20,7 @@ const CheckoutCard = ({ item }) => {
               {item.title.substring(0, 5)}
             </span>
             <span className="text-xs text-gray-400 mb-2">
-              Item Price ${item.price}
+              Item Price ₹{item.price}
             </span>
           </p>
           <div className="h-8 w-20 flex flex-wrap items-center justify-evenly p-1 border border-gray-100 bg-white text-gray-600 rounded-md">
@@ -46,7 +46,7 @@ const CheckoutCard = ({ item }) => {
           </div>
 
           <div className="font-bold text-sm text-heading leading-5">
-            <span>${(item.price * item.quantity).toFixed(2)}</span>
+            <span>₹{(item.price * item.quantity).toFixed(2)}</span>
           </div>
         </div>
       </div>

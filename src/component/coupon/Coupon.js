@@ -121,7 +121,7 @@ const Coupon = ({ couponInHome }) => {
                   </div>
                   <p className="text-xs leading-4 text-gray-500 mt-2">
                     * This coupon apply when shopping more then{' '}
-                    <span className="font-bold"> ${coupon.minimumAmount}</span>{' '}
+                    <span className="font-bold"> ₹{coupon.minimumAmount}</span>{' '}
                   </p>
                 </div>
               </div>
@@ -229,7 +229,7 @@ const Coupon = ({ couponInHome }) => {
                     </span>{' '}
                     and when you shopping more then{' '}
                     <span className="font-bold text-gray-700">
-                      ${coupon.minimumAmount}
+                      ₹{coupon.minimumAmount}
                     </span>{' '}
                   </p>
                 </div>

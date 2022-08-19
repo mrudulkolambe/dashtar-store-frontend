@@ -110,7 +110,7 @@ const CouponDetails = ({ coupon }) => {
               </div>
               <p className="text-xs leading-5 text-gray-500 mt-2">
                 * This coupon code apply when you shopping more then{' '}
-                <span className="font-medium"> ${coupon.minimumAmount}</span>{' '}
+                <span className="font-medium"> ₹{coupon.minimumAmount}</span>{' '}
               </p>
             </div>
           </div>

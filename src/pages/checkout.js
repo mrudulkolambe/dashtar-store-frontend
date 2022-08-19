@@ -293,19 +293,19 @@ const Checkout = () => {
                 <div className="flex items-center py-2 text-sm w-full font-semibold text-gray-500 last:border-b-0 last:text-base last:pb-0">
                   Subtotal
                   <span className="ml-auto flex-shrink-0 text-gray-800 font-bold">
-                    ${cartTotal.toFixed(2)}
+                  ₹{cartTotal.toFixed(2)}
                   </span>
                 </div>
                 <div className="flex items-center py-2 text-sm w-full font-semibold text-gray-500 last:border-b-0 last:text-base last:pb-0">
                   Shipping Cost
                   <span className="ml-auto flex-shrink-0 text-gray-800 font-bold">
-                    ${shippingCost.toFixed(2)}
+                  ₹{shippingCost.toFixed(2)}
                   </span>
                 </div>
                 <div className="flex items-center py-2 text-sm w-full font-semibold text-gray-500 last:border-b-0 last:text-base last:pb-0">
                   Discount
                   <span className="ml-auto flex-shrink-0 font-bold text-orange-400">
-                    ${discountAmount.toFixed(2)}
+                  ₹{discountAmount.toFixed(2)}
                   </span>
                 </div>
                 <div className="border-t mt-4">
@@ -313,7 +313,7 @@ const Checkout = () => {
                     Total cost
                     <span className="font-serif font-extrabold text-lg">
                       {' '}
-                      ${Math.round(total)}.00
+                      ₹{Math.round(total)}.00
                     </span>
                   </div>
                 </div>

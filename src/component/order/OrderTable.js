@@ -15,11 +15,11 @@ const OrderTable = ({ data }) => {
             {item.quantity}{' '}
           </td>
           <td className="px-6 py-1 whitespace-nowrap font-bold text-center font-DejaVu">
-            ${item.price}.00{' '}
+          ₹{item.price}.00{' '}
           </td>
 
           <td className="px-6 py-1 whitespace-nowrap text-right font-bold font-DejaVu k-grid text-red-500">
-            ${item.itemTotal}.00
+          ₹{item.itemTotal}.00
           </td>
         </tr>
       ))}

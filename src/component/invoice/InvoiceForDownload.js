@@ -233,13 +233,13 @@ const InvoiceForDownload = ({ data }) => {
                 <View style={styles.tableCol}>
                   <Text style={styles.tableCell}>
                     {' '}
-                    <span style={styles.quantity}>${item.price}.00</span>{' '}
+                    <span style={styles.quantity}>₹{item.price}.00</span>{' '}
                   </Text>
                 </View>
 
                 <View style={styles.tableCol}>
                   <Text style={styles.tableCell}>
-                    <span style={styles.amount}>${item.itemTotal}.00</span>{' '}
+                    <span style={styles.amount}>₹{item.itemTotal}.00</span>{' '}
                   </Text>
                 </View>
               </View>
@@ -254,17 +254,17 @@ const InvoiceForDownload = ({ data }) => {
             <View>
               <Text style={styles.title}>Shipping Cost</Text>
               <Text style={styles.info}>
-                ${Math.round(data.shippingCost)}.00
+              ₹{Math.round(data.shippingCost)}.00
               </Text>
             </View>
             <View>
               <Text style={styles.title}>Discount</Text>
-              <Text style={styles.info}> ${Math.round(data.discount)}.00</Text>
+              <Text style={styles.info}> ₹{Math.round(data.discount)}.00</Text>
             </View>
 
             <View>
               <Text style={styles.title}>Total Amount</Text>
-              <Text style={styles.amount}>${Math.round(data.total)}.00</Text>
+              <Text style={styles.amount}>₹{Math.round(data.total)}.00</Text>
             </View>
           </View>
 

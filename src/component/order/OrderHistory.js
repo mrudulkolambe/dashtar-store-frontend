@@ -34,7 +34,7 @@ const OrderHistory = ({ order }) => {
       </td>
       <td className="px-5 py-3 leading-6 text-center whitespace-nowrap">
         <span className="text-sm font-bold">
-          ${Math.round(order?.total)}.00
+        ₹{Math.round(order?.total)}.00
         </span>
       </td>
     </>

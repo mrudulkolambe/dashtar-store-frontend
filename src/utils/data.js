@@ -145,7 +145,7 @@ const featurePromo = [
   {
     id: 1,
     title: 'Free Shipping',
-    info: 'From $500.00',
+    info: 'From ₹500.00',
     icon: FiTruck,
   },
   {

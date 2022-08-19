@@ -18,7 +18,7 @@ const Card = () => {
         </span>
         <p className="font-sans leading-5 text-sm text-gray-500">
           Free shipping apply to all orders over shipping{' '}
-          <span className="font-semibold">$100</span>
+          <span className="font-semibold">₹100</span>
         </p>
       </li>
       <li className="flex items-center py-3">
