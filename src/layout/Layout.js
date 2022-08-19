@@ -21,7 +21,7 @@ const Layout = ({ title, description, children }) => {
               : 'FruitFlix'}
           </title>
           {description && <meta name="description" content={description} />}
-          <link ref="icon" href="/favicon.png" />
+          <link ref="icon" href="/logo.png" />
         </Head>
         {/* <NavBarTop /> */}
         <Navbar />
