@@ -9,6 +9,7 @@ import {
   IoWalletSharp,
 } from 'react-icons/io5';
 import { ImCreditCard } from 'react-icons/im';
+import Script from 'next/script'
 
 //internal import
 import Layout from '@layout/Layout';
@@ -30,7 +31,6 @@ const Checkout = () => {
     showCard,
     setShowCard,
     error,
-    stripe,
     couponInfo,
     couponRef,
     handleCouponCode,
@@ -45,6 +45,7 @@ const Checkout = () => {
 
   return (
     <>
+      <Script src="https://checkout.razorpay.com/v1/checkout.js" />
       <Layout title="Checkout" description="this is checkout page">
         <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
           <div className="py-10 lg:py-12 px-0 2xl:max-w-screen-2xl w-full xl:max-w-screen-xl flex flex-col md:flex-row lg:flex-row">
@@ -184,12 +185,6 @@ const Checkout = () => {
                     <h2 className="font-semibold font-serif text-base text-gray-700 pb-3">
                       03. Payment Details
                     </h2>
-                    {showCard && (
-                      <div className="mb-3">
-                        <CardElement />{' '}
-                        <p className="text-red-400 text-sm mt-1">{error}</p>
-                      </div>
-                    )}
                     <div className="grid grid-cols-6 gap-6">
                       <div className="col-span-6 sm:col-span-3">
                         <InputPayment
@@ -206,8 +201,8 @@ const Checkout = () => {
                         <InputPayment
                           setShowCard={setShowCard}
                           register={register}
-                          name="Credit Card"
-                          value="Card"
+                          name="UPI, Credit Card, Debit Card"
+                          value="Other"
                           Icon={ImCreditCard}
                         />
                         <Error errorName={errors.paymentMethod} />
@@ -229,7 +224,7 @@ const Checkout = () => {
                     <div className="col-span-6 sm:col-span-3">
                       <button
                         type="submit"
-                        disabled={isEmpty || !stripe || isCheckoutSubmit}
+                        disabled={isEmpty || isCheckoutSubmit}
                         className="new-bg hover:bg-emerald-600 border border-emerald-500 transition-all rounded py-3 text-center text-sm font-serif font-medium text-white flex justify-center w-full"
                       >
                         Confirm Order{' '}

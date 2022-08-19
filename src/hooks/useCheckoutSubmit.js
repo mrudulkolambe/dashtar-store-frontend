@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useCart } from 'react-use-cart';
-import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+// import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 
 //internal import
 import useAsync from '@hooks/useAsync';
@@ -31,8 +31,8 @@ const useCheckoutSubmit = () => {
   const [isCheckoutSubmit, setIsCheckoutSubmit] = useState(false);
 
   const router = useRouter();
-  const stripe = useStripe();
-  const elements = useElements();
+  // const stripe = useStripe();
+  // const elements = useElements();
   const couponRef = useRef('');
   const { isEmpty, emptyCart, items, cartTotal } = useCart();
 
@@ -93,11 +93,24 @@ const useCheckoutSubmit = () => {
     setValue('zipCode', shippingAddress.zipCode);
   }, []);
 
+  const loadRazorpay = (url) => {
+    return new Promise((resolve) => {
+      const script = document.createElement('script');
+      script.src = url
+      document.body.appendChild(script);
+      script.onload = () => {
+        resolve(true)
+      }
+      script.onerror = () => {
+        resolve(false)
+      }
+    })
+  }
+
   const submitHandler = async (data) => {
     dispatch({ type: 'SAVE_SHIPPING_ADDRESS', payload: data });
     Cookies.set('shippingAddress', JSON.stringify(data));
     setIsCheckoutSubmit(true);
-
     let orderInfo = {
       name: `${data.firstName} ${data.lastName}`,
       address: data.address,
@@ -115,39 +128,46 @@ const useCheckoutSubmit = () => {
       discount: discountAmount,
       total: total,
     };
-    if (data.paymentMethod === 'Card') {
-      if (!stripe) {
-        return;
+    if (data.paymentMethod === 'Other') {
+      const orderData = {
+        currency: "INR",
+        amount: orderInfo.total
       }
-      const cardElement = elements.getElement(CardElement);
-      const { error, paymentMethod } = await stripe.createPaymentMethod({
-        type: 'card',
-        card: cardElement,
-      });
-
-      if (error && !paymentMethod) {
-        setError(error.message);
-      } else {
-        setError('');
-        const orderData = {
-          ...orderInfo,
-          cardInfo: paymentMethod,
-        };
-
-        OrderServices.addOrder(orderData)
-          .then((res) => {
-            router.push(`/order/${res._id}`);
-            notifySuccess('Your Order Confirmed!');
-            Cookies.remove('couponInfo');
-            emptyCart();
-            sessionStorage.removeItem('products');
-            setIsCheckoutSubmit(false);
-          })
-          .catch((err) => {
-            notifyError(err.message);
-            setIsCheckoutSubmit(false);
-          });
-      }
+      OrderServices.createOrder(orderData)
+        .then(async (orderResponse) => {
+          console.log(orderResponse);
+          const result = await loadRazorpay("https://checkout.razorpay.com/v1/checkout.js");
+          if (!result) {
+            alert("Razorpay SDK failed to load")
+            return
+          } else {
+            var options = {
+              "key": 'rzp_test_ROZPySb3JEIGT4', // Enter the Key ID generated from the Dashboard
+              "amount": orderInfo.total, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+              "currency": "INR",
+              "name": "FruitFlix",
+              "description": "Payment For FruitFlix",
+              "image": "https://dashtar-store-frontend.vercel.app/_next/image?url=%2Flogo%2Flogo.png&w=128&q=75",
+              "order_id": orderResponse.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+              "handler": function (response) {
+                handleSuccess(response, orderInfo, data)
+              },
+              "prefill": {
+                "name": orderInfo.name,
+                "email": orderInfo.email,
+                "contact": orderInfo.contact
+              },
+              "theme": {
+                "color": "#3399cc"
+              }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.on('payment.failed', function (response) {
+              alert(response.error.description);
+            });
+            rzp1.open();
+          }
+        })
     }
     if (data.paymentMethod === 'COD') {
       OrderServices.addOrder(orderInfo)
@@ -165,6 +185,28 @@ const useCheckoutSubmit = () => {
         });
     }
   };
+
+  const handleSuccess = (response, orderInfo, data) => {
+    const orderData = {
+      ...orderInfo,
+      cardInfo: data.paymentMethod,
+      payment: response,
+    };
+    OrderServices.addOrder(orderData)
+      .then((res) => {
+        notifySuccess('Your Order Confirmed!');
+        router.push(`/order/${res._id}`);
+        Cookies.remove('couponInfo');
+        emptyCart();
+        sessionStorage.removeItem('products');
+        setIsCheckoutSubmit(false);
+      })
+      .catch((err) => {
+        notifyError(err.message);
+        setIsCheckoutSubmit(false);
+      });
+  }
+
 
   const handleShippingCost = (value) => {
     setShippingCost(value);
@@ -217,7 +259,6 @@ const useCheckoutSubmit = () => {
     showCard,
     setShowCard,
     error,
-    stripe,
     couponInfo,
     couponRef,
     handleCouponCode,
