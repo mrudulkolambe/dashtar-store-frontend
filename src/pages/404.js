@@ -9,7 +9,7 @@ const NotFound = () => {
       <Head>
         <title>FruitFlix | 404</title>
         <meta name="description" content="This is page not found 404 page" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <div className="px-6 py-10 lg:py-20 bg-emerald-50 h-screen flex flex-wrap content-center">
         <div className="block justify-items-stretch mx-auto items-center text-center">

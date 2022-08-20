@@ -37,9 +37,9 @@ const ProductCard = ({ product }) => {
               Stock Out
             </span>
           )}
-          <div 
-          style={{backgroundColor:`#E0A2B4`}}
-          className='mb-2 group box-border w-50% overflow-hidden rounded-b-md py-1 px-2 flex  flex-col items-center justify-center  text-black relative '>
+          <div
+            style={{ backgroundColor: `#E0A2B4` }}
+            className='mb-2 group box-border w-50% overflow-hidden rounded-b-md py-1 px-2 flex  flex-col items-center justify-center  text-black relative '>
             <h2 className="text-heading truncate block text-sm font-medium">
               <span className="line-clamp-2">{product.title}</span>
             </h2>
@@ -47,13 +47,13 @@ const ProductCard = ({ product }) => {
           {/* <Discount product={product} /> */}
 
           <Image
-            src={'https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FZ5yQ47YB%2FRainbow-Chard-Package-per-lb.jpg&w=256&q=75'}
+            src={product.image}
             width={150}
             height={150}
             alt={product.title}
             className="object-cover transition duration-150 ease-linear transform group-hover:scale-105"
           />
-         
+
         </div>
         <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
           {/* <div className="relative mb-1">
@@ -66,7 +66,7 @@ const ProductCard = ({ product }) => {
           </div> */}
 
           <div className="mt-2 flex flex-col justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-          {/* <Price product={product} card={true} /> */}
+            {/* <Price product={product} card={true} /> */}
             {inCart(product._id) ? (
               <div className='mb-2'>
                 {items.map(
@@ -98,11 +98,11 @@ const ProductCard = ({ product }) => {
                             <IoAdd />
                           </span>
                         </button>
-                        
+
                       </div>
                     )
                 )}{' '}
-                
+
               </div>
             ) : (
               <button
@@ -117,7 +117,7 @@ const ProductCard = ({ product }) => {
                 </span>{' '}
               </button>
             )}
-            
+
             <Price product={product} card={true} />
           </div>
         </div>

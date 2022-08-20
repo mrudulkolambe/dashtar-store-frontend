@@ -21,7 +21,7 @@ class MyDocument extends Document {
           />
           <meta
             property="og:url"
-            content="https://kachabazar-store.vercel.app/"
+            content="https://fruitflix-store.vercel.app/"
           />
         </Head>
         <body>

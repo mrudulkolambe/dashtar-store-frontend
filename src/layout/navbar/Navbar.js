@@ -26,7 +26,6 @@ const Navbar = () => {
   const {
     state: { userInfo },
   } = useContext(UserContext);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchText) {
@@ -105,12 +104,12 @@ const Navbar = () => {
                   Contact Us
                 </a>
               </Link>
-              <Link href="/about-us">
+              <Link href="/#">
                 <a className="Poppins mx-2 py-2 text-l font-semibold hover:text-emerald-600">
                   Shop
                 </a>
               </Link>
-              <Link href="/contact-us">
+              <Link href="/#">
                 <a className="Poppins mx-2 py-2 text-l font-semibold hover:text-emerald-600">
                   Offers
                 </a>
@@ -140,13 +139,13 @@ const Navbar = () => {
                 className="pl-5 text-black text-2xl font-bold"
                 aria-label="Login"
               >
-                {imageUrl || userInfo?.image ? (
+                {userInfo && userInfo.image ? (
                   <Link href="/user/dashboard">
                     <a className="relative top-1 w-6 h-6">
                       <Image
                         width={29}
                         height={29}
-                        src={imageUrl || userInfo?.image}
+                        src={imageUrl || userInfo && userInfo.image}
                         alt="user"
                         className="bg-black rounded-full"
                       />

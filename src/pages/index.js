@@ -13,10 +13,11 @@ import FeatureCategory from '@component/category/FeatureCategory';
 import { ImTruck } from 'react-icons/im'
 import { FaShoppingBag } from 'react-icons/fa'
 import { MdOutlineLocalLaundryService } from 'react-icons/md'
+import { useRouter } from 'next/router';
 
 const Home = ({ products, popularProducts, discountProducts }) => {
   const [value, set] = useSessionstorage('products', products);
-
+  const router = useRouter()
   return (
     <>
       <Layout>
@@ -81,7 +82,7 @@ const Home = ({ products, popularProducts, discountProducts }) => {
                     </div>
                   </div>
                   <div className='text-center flex items-center flex-col'>
-                    <img src={'/app/step-2.png'} className="serve-img" alt=""  />
+                    <img src={'/app/step-2.png'} className="serve-img" alt="" />
                     <div>
                       <h1 className='accent-color-text text-2xl'>Step 2</h1>
                       <p>Placed your order in just few seconds</p>
@@ -120,11 +121,13 @@ const Home = ({ products, popularProducts, discountProducts }) => {
                   {/* {popularProducts?.slice(0, 18).map((product) => (
                     <ProductCard key={product._id} product={product} />
                   ))} */}
-                  {products?.slice(0, 18).map((product) => (
-                    <ProductCard key={product._id} product={product} />
-                  ))}
+                  {
+                    products && products.slice(0, 6).map((product, i) => {
+                      return <ProductCard key={product._id} product={product} />
+                    })
+                  }
                 </div>
-                <div className='flex w-full justify-center mt-4'><button className=' bg-yellow-500 text-gray-700 py-1 px-3 rounded-lg'>View More</button></div>
+                <div className='flex w-full justify-center mt-4'><button onClick={() => { router.push("/product") }} className=' bg-yellow-500 text-gray-700 py-1 px-3 rounded-lg'>View More</button></div>
               </div>
             </div>
           </div>

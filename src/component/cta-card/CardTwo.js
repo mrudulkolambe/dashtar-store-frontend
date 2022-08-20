@@ -5,7 +5,7 @@ import Link from 'next/link';
 const CardTwo = () => {
   return (
     <>
-      <div className="w-full bg-white shadow-sm lg:px-10 lg:py-5 p-6 rounded-lg">
+      <div className="hidden w-full bg-white shadow-sm lg:px-10 lg:py-5 p-6 rounded-lg">
         <div className="flex justify-between items-center">
           <div className="lg:w-3/5">
             <span className="text-base lg:text-lg">
@@ -17,7 +17,7 @@ const CardTwo = () => {
             </h2>
             <p className="text-sm font-sans leading-6">
               There are many products you will find our shop, Choose your daily
-              necessary product from our KachaBazar shop and get some special
+              necessary product from our fruitflix shop and get some special
               offer. See Our latest discounted products from here and get a
               special discount.
             </p>

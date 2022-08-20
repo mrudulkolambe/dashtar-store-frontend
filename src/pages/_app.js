@@ -7,6 +7,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { UserProvider } from '@context/UserContext';
 import DefaultSeo from '@component/common/DefaultSeo';
 import { SidebarProvider } from '@context/SidebarContext';
+import Whatsapp from 'src/Whatsapp';
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY || null);
 
 function MyApp({ Component, pageProps }) {

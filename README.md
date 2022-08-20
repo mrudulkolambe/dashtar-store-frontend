@@ -1,7 +1,7 @@
-KachaBazar Frontend Documentation
+fruitflix Frontend Documentation
 
 
-Site name : KachaBazar - Grocery & Organic Food Store React Template with Admin Dashboard
+Site name : fruitflix - Grocery & Organic Food Store React Template with Admin Dashboard
 
 
 Introduction:
@@ -37,7 +37,7 @@ Tech and Packages we use in this project:
 
 Getting Started & Installation:
 
-For getting started with the template you have to follow the below procedure. First navigate to the kachabazar-admin directory.
+For getting started with the template you have to follow the below procedure. First navigate to the fruitflix-admin directory.
 
 Step 1 : Configure your env.local file:
 

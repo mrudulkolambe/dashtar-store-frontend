@@ -1,8 +1,8 @@
 {
-  "name": "kachabazar-store",
+  "name": "fruitflix-store",
   "version": "0.1.0",
-  "description": "this is kachabazar-store built with next.js and tailwindcss",
-  "homepage": "https://kachabazar-store.vercel.app/",
+  "description": "this is fruitflix-store built with next.js and tailwindcss",
+  "homepage": "https://fruitflix-store.vercel.app/",
   "private": true,
   "scripts": {
     "dev": "next dev -p 8080",
@@ -23,6 +23,7 @@
     "axios": "^0.24.0",
     "currency-symbol-map": "^5.0.1",
     "dayjs": "^1.10.7",
+    "firebase": "^9.9.3",
     "html2canvas": "^1.3.3",
     "iconv-lite": "^0.6.3",
     "js-cookie": "^3.0.1",

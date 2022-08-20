@@ -48,18 +48,6 @@ const ProductScreen = ({ product, relatedProduct }) => {
               </li>
               <li className="text-sm mt-[1px]">
                 {' '}
-                <FiChevronRight />{' '}
-              </li>
-              <li className="text-sm pl-1 transition duration-200 ease-in cursor-pointer hover:new-text-600 font-semibold ">
-                <Link
-                  href={`/search?category=${product.children
-                    .toLowerCase()
-                    .replace('&', '')
-                    .split(' ')
-                    .join('-')}`}
-                >
-                  <a>{product.children}</a>
-                </Link>
               </li>
               <li className="text-sm mt-[1px]">
                 {' '}
@@ -90,14 +78,14 @@ const ProductScreen = ({ product, relatedProduct }) => {
                       <h1 className="leading-7 text-lg md:text-xl lg:text-2xl mb-1 font-semibold font-serif text-gray-800">
                         {product.title}
                       </h1>
-                      <p className="uppercase font-serif font-medium text-gray-500 text-sm">
+                      {/* <p className="hidden uppercase font-serif font-medium text-gray-500 text-sm">
                         SKU :{' '}
                         <span className="font-bold text-gray-600">
                           {product.sku
                             ? product.sku
                             : product._id.substring(18, 24)}
                         </span>
-                      </p>
+                      </p> */}
                     </div>
                     <Price product={product} />
                     <div className="mb-4 md:mb-5 block">
@@ -153,7 +141,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                         Add to Cart
                       </button> */}
 
-                      <div className="flex flex-col mt-4">
+                      <div className="hidden flex-col mt-4">
                         <span className="font-serif font-semibold py-1 text-sm d-block">
                           <span className="text-gray-700">Category:</span>{' '}
                           <span className="text-gray-500">
@@ -176,7 +164,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                           <li className="flex items-center text-center border border-gray-100 rounded-full hover:new-bg  mr-2 transition ease-in-out duration-500">
                             <FacebookShareButton
                               url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
-                              quote="KachaBazar"
+                              quote="fruitflix"
                             >
                               <FacebookIcon size={32} round />
                             </FacebookShareButton>
@@ -184,7 +172,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                           <li className="flex items-center text-center border border-gray-100 rounded-full hover:new-bg  mr-2 transition ease-in-out duration-500">
                             <TwitterShareButton
                               url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
-                              quote="KachaBazar"
+                              quote="fruitflix"
                             >
                               <TwitterIcon size={32} round />
                             </TwitterShareButton>
@@ -192,7 +180,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                           <li className="flex items-center text-center border border-gray-100 rounded-full hover:new-bg  mr-2 transition ease-in-out duration-500">
                             <RedditShareButton
                               url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
-                              quote="KachaBazar"
+                              quote="fruitflix"
                             >
                               <RedditIcon size={32} round />
                             </RedditShareButton>
@@ -200,7 +188,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                           <li className="flex items-center text-center border border-gray-100 rounded-full hover:new-bg  mr-2 transition ease-in-out duration-500">
                             <WhatsappShareButton
                               url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
-                              quote="KachaBazar"
+                              quote="fruitflix"
                             >
                               <WhatsappIcon size={32} round />
                             </WhatsappShareButton>
@@ -208,7 +196,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                           <li className="flex items-center text-center border border-gray-100 rounded-full hover:new-bg  mr-2 transition ease-in-out duration-500">
                             <LinkedinShareButton
                               url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
-                              quote="KachaBazar"
+                              quote="fruitflix"
                             >
                               <LinkedinIcon size={32} round />
                             </LinkedinShareButton>
