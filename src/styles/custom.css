@@ -469,3 +469,44 @@ p:not(:last-of-type) {
   height: max-content;
   width: max-content;
 }
+
+.banana {
+  top: 1099px;
+  left: 10px;
+  transform: scale(0.6);
+}
+.kiwi {
+  top: 950px;
+  left: 50%;
+  transform: scale(0.5);
+}
+.grapes{
+  top: 1130px;
+  left: 92%;
+  transform: scale(0.7);
+}
+.orange2{
+  top: 1440px;
+  left: 40%;
+  transform: scale(0.7);
+}
+.cherry{
+  top: 1480px;
+  left: 3%;
+  transform: scale(0.5);
+}
+.peach{
+  top: 1690px;
+  right: 3%;
+  transform: scale(0.5);
+}
+.lemon{
+  top: 1740px;
+  right: 30%;
+  transform: scale(0.6);
+}
+.pear{
+  top: 1880px;
+  left: 2%;
+  transform: scale(0.6);
+}

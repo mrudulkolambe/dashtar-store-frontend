@@ -22,6 +22,16 @@ const Home = ({ products, popularProducts, discountProducts }) => {
     <>
       <Layout>
         <div className="min-h-screen">
+          <div>
+            <img src="/fruits/banana.png" className='absolute banana z-40' alt="" />
+            <img src="/fruits/kiwi.png" className='absolute kiwi z-40' alt="" />
+            <img src="/fruits/grapes.png" className='absolute grapes z-40' alt="" />
+            <img src="/fruits/orange2.png" className='absolute orange2 z-40' alt="" />
+            <img src="/fruits/cherry.png" className='absolute cherry z-40' alt="" />
+            <img src="/fruits/peach.png" className='absolute peach z-40' alt="" />
+            <img src="/fruits/lemon.png" className='absolute lemon z-40' alt="" />
+            <img src="/fruits/pear.png" className='absolute pear z-40' alt="" />
+          </div>
           <StickyCart />
           <div className="bg-white">
             <div className="mx-auto py-5 max-w-screen-2xl px-3 sm:px-10">
@@ -117,13 +127,15 @@ const Home = ({ products, popularProducts, discountProducts }) => {
             </div>
             <div className="flex">
               <div className="w-full">
-                <div className="grid md:grid-cols-3 justify-items-center grid-cols-1 xs:grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5 gap-2 md:gap-6 lg:gap-8">
+                <div className="grid md:grid-cols-3 justify-items-center grid-cols-1 xs:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-2 md:gap-6 lg:gap-8">
                   {/* {popularProducts?.slice(0, 18).map((product) => (
                     <ProductCard key={product._id} product={product} />
                   ))} */}
                   {
-                    products && products.slice(0, 6).map((product, i) => {
-                      return <ProductCard key={product._id} product={product} />
+                    products && products.map((product, i) => {
+                      if (i < 3) {
+                        return <ProductCard key={product._id} product={product} />
+                      }
                     })
                   }
                 </div>
