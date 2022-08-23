@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <div
-      className="pb-16 lg:pb-0 xl:pb-0 bg-white Acme"
+      className="z-50 pb-16 lg:pb-0 xl:pb-0 bg-white Acme"
       style={{ backgroundColor: `#FDE8A6` }}
     >
       <div className="mx-auto max-w-screen-2xl px-2 sm:px-10">

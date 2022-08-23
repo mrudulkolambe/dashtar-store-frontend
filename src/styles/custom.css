@@ -473,16 +473,19 @@ p:not(:last-of-type) {
 .banana {
   top: 1099px;
   left: 10px;
+  z-index: 12;
   transform: scale(0.6);
 }
 .kiwi {
   top: 950px;
+  z-index: 12;
   left: 50%;
   transform: scale(0.5);
 }
 .grapes{
   top: 1130px;
-  left: 92%;
+  left: 70%;
+  z-index: 12;
   transform: scale(0.7);
 }
 .orange2{
@@ -493,15 +496,18 @@ p:not(:last-of-type) {
 .cherry{
   top: 1480px;
   left: 3%;
+  z-index: 12;
   transform: scale(0.5);
 }
 .peach{
   top: 1690px;
   right: 3%;
   transform: scale(0.5);
+  z-index: 12;
 }
 .lemon{
   top: 1740px;
+  z-index: 12;
   right: 30%;
   transform: scale(0.6);
 }
@@ -509,4 +515,5 @@ p:not(:last-of-type) {
   top: 1880px;
   left: 2%;
   transform: scale(0.6);
+  z-index: 12;
 }

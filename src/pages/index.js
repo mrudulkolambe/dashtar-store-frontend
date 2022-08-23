@@ -23,14 +23,14 @@ const Home = ({ products, popularProducts, discountProducts }) => {
       <Layout>
         <div className="min-h-screen">
           <div>
-            <img src="/fruits/banana.png" className='absolute banana z-40' alt="" />
-            <img src="/fruits/kiwi.png" className='absolute kiwi z-40' alt="" />
-            <img src="/fruits/grapes.png" className='absolute grapes z-40' alt="" />
-            <img src="/fruits/orange2.png" className='absolute orange2 z-40' alt="" />
-            <img src="/fruits/cherry.png" className='absolute cherry z-40' alt="" />
-            <img src="/fruits/peach.png" className='absolute peach z-40' alt="" />
-            <img src="/fruits/lemon.png" className='absolute lemon z-40' alt="" />
-            <img src="/fruits/pear.png" className='absolute pear z-40' alt="" />
+            <img src="/fruits/banana.png" className='z-0 absolute banana md:banana-md' alt="" />
+            <img src="/fruits/kiwi.png" className='z-0 absolute kiwi' alt="" />
+            <img src="/fruits/grapes.png" className='z-0 absolute grapes' alt="" />
+            <img src="/fruits/orange2.png" className='z-0 absolute orange2' alt="" />
+            <img src="/fruits/cherry.png" className='z-0 absolute cherry' alt="" />
+            <img src="/fruits/peach.png" className='z-0 absolute peach' alt="" />
+            <img src="/fruits/lemon.png" className='z-0 absolute lemon' alt="" />
+            <img src="/fruits/pear.png" className='z-0 absolute pear' alt="" />
           </div>
           <StickyCart />
           <div className="bg-white">
@@ -54,10 +54,10 @@ const Home = ({ products, popularProducts, discountProducts }) => {
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <div className="mb-10 flex justify-center">
                 <div className="text-center w-full lg:w-2/5">
-                  <h2 className="text-xl lg:text-2xl mb-2 Acme font-semibold">
+                  <h2 className="z-30 text-xl lg:text-2xl mb-2 Acme font-semibold">
                     Featured Categories
                   </h2>
-                  <p className="text-base font-sans text-gray-600 leading-6">
+                  <p className="z-30 text-base font-sans text-gray-600 leading-6">
                     Choose your necessary products from this feature categories.
                   </p>
                 </div>
@@ -70,7 +70,7 @@ const Home = ({ products, popularProducts, discountProducts }) => {
           <div className="bg-gray-50 lg:py-16 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10 Acme">
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
-                <h2 className="text-xl lg:text-2xl mb-2 Acme font-semibold Acme">
+                <h2 className="z-30 text-xl lg:text-2xl mb-2 Acme font-semibold Acme">
                   How we can serve you and deliver
                   your <span className='accent-color-text'>favourite fruits</span>
                 </h2>
@@ -83,26 +83,26 @@ const Home = ({ products, popularProducts, discountProducts }) => {
             </div>
             <div className="flex mt-4">
               <div className="w-full">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 w-full gap-6">
+                <div className="z-30 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 w-full gap-6">
                   <div className='text-center flex items-center flex-col'>
                     <img src={'/app/step-1.png'} className="serve-img" alt="" />
                     <div>
-                      <h1 className='accent-color-text text-2xl'>Step 1</h1>
-                      <p>Select your item and get into your cart</p>
+                      <h1 className='z-30 accent-color-text text-2xl'>Step 1</h1>
+                      <p className="z-30 ">Select your item and get into your cart</p>
                     </div>
                   </div>
-                  <div className='text-center flex items-center flex-col'>
+                  <div className='z-30 text-center flex items-center flex-col'>
                     <img src={'/app/step-2.png'} className="serve-img" alt="" />
                     <div>
-                      <h1 className='accent-color-text text-2xl'>Step 2</h1>
+                      <h1 className='z-30 accent-color-text text-2xl'>Step 2</h1>
                       <p>Placed your order in just few seconds</p>
                     </div>
                   </div>
-                  <div className='text-center flex items-center flex-col'>
+                  <div className='z-30 text-center flex items-center flex-col'>
                     <img src={'/app/step-3.png'} className="serve-img" alt="" />
-                    <div className='text-center'>
-                      <h1 className='accent-color-text text-2xl'>Step 3</h1>
-                      <p className='w-1/2 m-auto'>Your order will be delivered to your address with proper quality checks</p>
+                    <div className='z-30 text-center'>
+                      <h1 className='z-30 accent-color-text text-2xl'>Step 3</h1>
+                      <p className='z-30 w-1/2 m-auto'>Your order will be delivered to your address with proper quality checks</p>
                     </div>
                   </div>
                 </div>
@@ -116,9 +116,9 @@ const Home = ({ products, popularProducts, discountProducts }) => {
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
                 <h2 className="text-xl lg:text-2xl mb-2 Acme font-semibold Acme">
-                  <span className='accent-color-text'>Popular</span> Products for Daily Shopping
+                  <span className='z-30 accent-color-text'>Popular</span> Products for Daily Shopping
                 </h2>
-                <p className="text-base font-sans text-gray-600 leading-6 Acme">
+                <p className="z-30 text-base font-sans text-gray-600 leading-6 Acme">
                   See all our popular products in this week. You can choose your
                   daily needs products from this list and get some special offer
                   with free shipping.
@@ -149,10 +149,10 @@ const Home = ({ products, popularProducts, discountProducts }) => {
           <div className="bg-gray-50 lg:py-16 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10 Acme">
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
-                <h2 className="text-xl lg:text-2xl mb-2 Acme font-semibold Acme">
+                <h2 className="z-30 text-xl lg:text-2xl mb-2 Acme font-semibold Acme">
                   <span className='accent-color-text'>FruitFlix</span> could be your daily service
                 </h2>
-                <p className="text-base font-sans text-gray-600 leading-6 Acme">
+                <p className="z-30 text-base font-sans text-gray-600 leading-6 Acme">
                   See all our popular products in this week. you can choose your daily needs products from this
                   list and get some special offer with free shipping
                 </p>
