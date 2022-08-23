@@ -21,7 +21,7 @@ const ProductPage = () => {
 		<>
 			<Layout title={"All Products"} description={"Page For All Products"}>
 				<div className='min-h-screen Acme'>
-					<div className="py-4 grid md:grid-cols-3 justify-items-center grid-cols-1 xs:grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5 gap-2 md:gap-6 lg:gap-8">
+					<div className="py-4 grid md:grid-cols-3 justify-items-center grid-cols-2 xs:grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5 gap-2 md:gap-6 lg:gap-8">
 						{
 							products && products.map((product) => {
 								return <ProductCard key={product._id} product={product} />

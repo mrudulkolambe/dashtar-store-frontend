@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
         product={product}
       />
 
-      <div className="w-60 shadow-lg group box-border overflow-hidden flex rounded-md pe-0 flex-col items-center justify-end bg-white relative">
+      <div className="md:w-60 w-40 shadow-lg group box-border overflow-hidden flex rounded-md pe-0 flex-col items-center justify-end bg-white relative">
         <div
           onClick={() => setModalOpen(!modalOpen)}
           className="relative flex flex-col items-center justify-center w-full cursor-pointer"

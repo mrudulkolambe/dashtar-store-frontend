@@ -461,7 +461,7 @@ p:not(:last-of-type) {
 
 .positionWhatsapp {
   position: fixed !important;
-  bottom: 40px;
+  bottom: 70px;
   right: 0px;
   border-top-left-radius: 6px !important;
   border-bottom-left-radius: 6px !important;

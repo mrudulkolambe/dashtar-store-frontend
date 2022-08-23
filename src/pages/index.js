@@ -160,24 +160,24 @@ const Home = ({ products, popularProducts, discountProducts }) => {
             </div>
             <div className="flex">
               <div className="w-full flex items-center flex-col">
-                <div className="w-11/12 grid md:grid-cols-2 justify-items-center grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-2 md:gap-6 lg:gap-8">
+                <div className="md:w-11/12 w-full grid md:grid-cols-2 justify-items-center grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-2 md:gap-6 lg:gap-8">
                   <div className='flex flex-col items-center'>
-                    <div className='rounded-full new-bg p-12 w-max'>
-                      <FaShoppingBag className='accent-color-text text-5xl' />
+                    <div className='rounded-full new-bg md:p-12 p-4 w-max'>
+                      <FaShoppingBag className='accent-color-text md:text-5xl text-3xl' />
                     </div>
-                    <h1 className='text-2xl mt-3'><span className='accent-color-text'>Fresh</span> Food</h1>
+                    <h1 className='md:text-2xl text-lg mt-3'><span className='accent-color-text'>Fresh</span> Food</h1>
                   </div>
                   <div className='flex flex-col items-center'>
-                    <div className='rounded-full new-bg p-12 w-max'>
-                      <ImTruck className='accent-color-text text-5xl' />
+                    <div className='rounded-full new-bg md:p-12 p-4 w-max'>
+                      <ImTruck className='accent-color-text md:text-5xl text-3xl' />
                     </div>
-                    <h1 className='text-2xl mt-3'><span className='accent-color-text'>Fastest</span> Delivery</h1>
+                    <h1 className='md:text-2xl text-lg mt-3 text-center'><span className='accent-color-text'>Fastest</span> Delivery</h1>
                   </div>
                   <div className='flex flex-col items-center'>
-                    <div className='rounded-full new-bg p-12 w-max'>
-                      <MdOutlineLocalLaundryService className='accent-color-text text-6xl' />
+                    <div className='rounded-full new-bg md:p-12 p-4 w-max'>
+                      <MdOutlineLocalLaundryService className='accent-color-text md:text-5xl text-3xl' />
                     </div>
-                    <h1 className='text-2xl mt-3'><span className='accent-color-text'>Best</span> Service</h1>
+                    <h1 className='md:text-2xl text-lg mt-3'><span className='accent-color-text'>Best</span> Service</h1>
                   </div>
                 </div>
               </div>
@@ -185,7 +185,7 @@ const Home = ({ products, popularProducts, discountProducts }) => {
           </div>
 
           {/* promotional banner card */}
-          <div className="block mx-auto max-w-screen-2xl">
+          <div className="hidden mx-auto max-w-screen-2xl">
             <div className="mx-auto max-w-screen-2xl px-4 sm:px-10">
               <div className="lg:p-16 p-6 new-bg shadow-sm border rounded-lg">
                 <CardTwo />
